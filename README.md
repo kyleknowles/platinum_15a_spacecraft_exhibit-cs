@@ -49,4 +49,3 @@ src/
 - Bharath Gowda
 - Chase Bulkin
 - Ian Zweig
-Developed for the ASU/NASA Psyche Mission educational outreach program.
