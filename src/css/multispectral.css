@@ -16,10 +16,12 @@
 
 .text1 {
     position: absolute;
-    width: 591px;
+    /*width: 591px; */
+    width: 750px;
     height: 333px;
     left: 1509px;
-    top: 781px;
+    /*top: 781px; */
+    top: 825px;
 
     /* P */
     font-family: 'Arial';

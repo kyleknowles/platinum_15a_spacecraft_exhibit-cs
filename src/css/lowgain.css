@@ -1,8 +1,10 @@
-.img1 {
+.img1 { 
     position: absolute;
-    width: 1670px;
+    /*width: 1670px;*/
+    width: auto;
     height: 1035px;
-    left: 247px;
+    /*left: 247px; */
+    left: 147px;
     top: 203px;
 }
 
