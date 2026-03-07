@@ -25,7 +25,8 @@
 .buttonMag,
 .buttonLow,
 .buttonGam,
-.buttonMul {
+.buttonMul,
+.buttonObj {
     position: absolute;
     width: 379px;
     height: 101px;
@@ -57,4 +58,8 @@
 
 .buttonMul {
     left: 1721px;
+}
+
+.buttonObj {
+    left: 2161px;
 }
