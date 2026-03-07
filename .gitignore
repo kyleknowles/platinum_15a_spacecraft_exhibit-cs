@@ -1,4 +1,8 @@
 .DS_Store
+<<<<<<< HEAD
 .DS_Store.vscode/launch.json
 .vscode/*
 !.vscode/extensions.json
+=======
+.vscode/*
+>>>>>>> 4cef6187735569bbbf841ddb7916b2c84299ea99
