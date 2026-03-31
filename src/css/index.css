@@ -108,6 +108,8 @@ button {
     border-radius: 30px;
 }
 
+/* How to make red: #EF5965 0%, #E64B54 47.32%, #D32F33 */
+
 .model {
     position: absolute;
     width: 724px;
