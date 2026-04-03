@@ -1,17 +1,33 @@
 .img1 {
     position: absolute;
-    width: 1574px;
-    height: 976px;
-    left: 284px;
-    top: 257px;
+    max-width: 1100px;
+    height: auto;
+    left: 80px;
+    top: 230px;
+}
+
+.img2 {
+    position: absolute;
+    max-width: 900px;
+    height: auto;
+    left: 1484px;
+    top: 777px;
+}
+
+.img3 {
+    position: absolute;
+   max-width: 900px;
+    height: auto;
+    left: 1484px;
+    top: 230px;
 }
 
 .text1 {
     position: absolute;
-    width: 380px;
+    width: 1100px;
     height: 753px;
-    left: 1930px;
-    top: 323px;
+    left: 80px;
+    top: 680px;
 
     /* P */
 

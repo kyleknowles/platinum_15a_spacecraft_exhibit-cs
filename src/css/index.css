@@ -104,9 +104,11 @@ button {
     left: 1025px;
     top: 738px;
 
-    background: linear-gradient(180deg, #EF5965 0%, #E64B54 47.32%, #D32F33 100%);
+    background: linear-gradient(180deg, #D99AFF 0%, #CF80FF 24.48%, #C05AFF 100%);
     border-radius: 30px;
 }
+
+/* How to make red: #EF5965 0%, #E64B54 47.32%, #D32F33 */
 
 .model {
     position: absolute;

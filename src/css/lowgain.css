@@ -8,6 +8,16 @@
     top: 203px;
 }
 
+.img2 { 
+    position: absolute;
+    /*width: 1670px;*/
+    max-width: 1100px;
+    height: auto;
+    /*left: 247px; */
+    left: 1300px;
+    top: 233px;
+}
+
 p {
     position: absolute;
     width: 379px;
