@@ -10,6 +10,14 @@ from pathlib import Path
 #   pip install numpy
 #   pip install pathlib
 
+
+#How to actually use this script
+#1. cd to src/imgs/, and then python button_image_creator.py
+#2. Choose the image file you want to apply a color mask onto
+#3. Choose a color, then finally, make a name for the new image. 
+# If you get an error, its most likely due to not typing the origin image file's name correctly.
+#4. If the does not fit the button you want to fill, windows photo editor has a "resize" option in ..., there you can scale to the button's size
+
 def hex_to_rgb(hex_color: str):
     hex_color = hex_color.strip().lstrip("#")
     if len(hex_color) != 6:

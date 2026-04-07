@@ -42,8 +42,15 @@
     height: 325px;
     left: 461px;
     top: 650px;
+    border-radius: 30px;
+}
 
-    background: rgba(2, 107, 0, 0.9);
+.obj {
+    position: absolute;
+    width: 799px;
+    height: 325px;
+    left: 881px;
+    top: 1035px;
     border-radius: 30px;
 }
 
@@ -68,7 +75,8 @@
     align-items: center;
     text-align: center;
 
-    color: #000000;
+    color: #FFFFFF;
+    text-shadow: 1px 5px 3px rgba(0, 0, 0, 0.18);
 }
 
 .magn .hd {
@@ -96,6 +104,14 @@
 }
 
 .low .hd {
+    position: absolute;
+    width: 800px;
+    height: 77px;
+    left: 100px;
+    top: 125px;
+}
+
+.obj .hd {
     position: absolute;
     width: 800px;
     height: 77px;

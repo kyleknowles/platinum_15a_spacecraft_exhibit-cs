@@ -40,7 +40,8 @@
     align-items: center;
     text-align: center;
 
-    color: #000000;
+    color: #FFFFFF;
+    text-shadow: 1px 5px 3px rgba(0, 0, 0, 0.18);
 }
 
 .XBand .hd {
