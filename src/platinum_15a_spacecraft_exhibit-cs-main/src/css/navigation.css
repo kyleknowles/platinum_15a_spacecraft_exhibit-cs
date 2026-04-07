@@ -1,0 +1,92 @@
+.bg {
+    margin-top: 90px;
+}
+
+.Cold {
+    position: absolute;
+    width: 799px;
+    height: 525px;
+    left: 461px;
+    top: 267px;
+
+    background: #00A9B7;
+    border-radius: 30px;
+}
+
+.Star {
+    position: absolute;
+    width: 799px;
+    height: 525px;
+    left: 1301px;
+    top: 267px;
+
+    background: #00A9B7;
+    border-radius: 30px;
+}
+
+.Sun {
+    position: absolute;
+    width: 799px;
+    height: 525px;
+    left: 461px;
+    top: 825px;
+
+    background: #00A9B7;
+    border-radius: 30px;
+}
+
+.SP {
+    position: absolute;
+    width: 799px;
+    height: 525px;
+    left: 1301px;
+    top: 825px;
+
+    background: #00A9B7;
+    border-radius: 30px;
+}
+
+.hd {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.875rem; /* 60px */
+    line-height: 70px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+
+.Cold .hd {
+    position: absolute;
+    width: 799px;
+    height: 522px;
+    left: 80px;
+    top: 0px;
+}
+
+.Star .hd {
+    position: absolute;
+    width: 799px;
+    height: 522px;
+    left: 190px;
+    top: 0px;
+}
+
+.Sun .hd {
+    position: absolute;
+    width: 799px;
+    height: 522px;
+    left: 200px;
+    top: 0px;
+}
+
+.SP .hd {
+    position: absolute;
+    width: 799px;
+    height: 522px;
+    left: 200px;
+    top: 0px;
+}

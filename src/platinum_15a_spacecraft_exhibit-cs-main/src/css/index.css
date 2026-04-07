@@ -1,0 +1,258 @@
+button {
+    border: none;
+    cursor: pointer;
+}
+
+.exhibit {
+    width: 1440px;
+    height: 209px;
+    position: absolute;
+    left: -620px;
+    top: 615px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 15px 6px rgba(0, 0, 0, 0.15);
+    transform: rotate(-90deg);
+}
+
+.exhibit .text {
+    position: absolute;
+    width: 228px;
+    height: 57px;
+    left: 780px;
+    top: 75px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.3125rem; /* 42px */
+    line-height: 1.53125rem; /* 49px */
+
+    color: #000000;
+
+}
+
+.exhibit .divider {
+    position: absolute;
+    width: 96.5px;
+    height: 0px;
+    left: 670px;
+    top: 100px;
+
+    border: 1px solid #000000;
+    transform: rotate(-90deg);
+}
+
+.exhibit .logo {
+    width: 192px;
+    height: 99px;
+    position: absolute;
+    left: 500px;
+    top: 80px;
+
+    transform: rotate(90deg);
+}
+
+.mission-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2560px;
+    height: 178px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--base-font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 125px; /* px — immune to a11y font scale */
+    color: #5c2851;
+    margin: 0;
+}
+
+.text1 {
+    position: absolute;
+    left: 260px;
+    top: 178px;
+    width: 725px;
+    height: 1262px;
+    border-radius: 30px;
+    padding: 60px 50px;
+    box-sizing: border-box;
+
+    font-family: var(--base-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.005em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* At scaled font sizes, anchor text to the top so the beginning is always
+   visible. overflow-y: auto is injected by accessibility.css for .text1. */
+body.a11y-scaled .text1 {
+    justify-content: flex-start;
+    padding-top: 0.5rem;
+}
+
+.science {
+    position: absolute;
+    width: 725px;
+    height: 613px;
+    left: 1025px;
+    top: 178px;
+
+    /* green */
+    background: linear-gradient(178.81deg, #40FF00 -0.99%, #17D613 98.98%);
+    border-radius: 30px;
+}
+
+.navigation {
+    position: absolute;
+    width: 724px;
+    height: 613px;
+    left: 1789px;
+    top: 178px;
+
+    background: linear-gradient(180deg, #00FFFF 0%, #00D9EA 42.63%, #00B6D6 100%);
+    border-radius: 30px;
+}
+
+.video {
+    position: absolute;
+    width: 724px;
+    height: 613px;
+    left: 1789px;
+    top: 178px;
+
+    /* purple */
+    background: linear-gradient(180deg, #D99AFF 0%, #CF80FF 24.48%, #C05AFF 100%);
+    border-radius: 30px;
+}
+
+.communication {
+    position: absolute;
+    width: 725px;
+    height: 613px;
+    left: 1025px;
+    top: 827px;
+
+    background: linear-gradient(180deg, #FFC801 0%, #FFA601 39.51%);
+    border-radius: 30px;
+}
+
+.spacecraft {
+    position: absolute;
+    width: 724px;
+    height: 613px;
+    left: 1789px;
+    top: 827px;
+
+    background: linear-gradient(180deg, #EF5965 0%, #E64B54 47.32%, #D32F33 100%);
+    border-radius: 30px;
+}
+
+.model {
+    position: absolute;
+    width: 724px;
+    height: 613px;
+    left: 1789px;
+    top: 827px;
+
+    /* purple */
+    background: linear-gradient(180deg, #D99AFF 0%, #CF80FF 24.48%, #C05AFF 100%);
+    border-radius: 30px;
+}
+
+.science .bg {
+    position: absolute;
+    left: 55px;
+    top: 94px;
+}
+
+.communication .bg {
+    position: absolute;
+    left: 43px;
+    top: 70px;
+}
+
+.navigation .bg {
+    position: absolute;
+    left: 23px;
+    top: 81px;
+}
+
+.spacecraft .bg {
+    position: absolute;
+    left: 48px;
+    top: 34px;
+}
+
+.video .bg {
+    position: absolute;
+    left: 32px;
+    top: 81px;
+}
+
+.model .bg {
+    position: absolute;
+    left: 35px;
+    top: 52px;
+}
+
+.hd {
+    position: absolute;
+    width: 500px;
+    height: 140px;
+
+    font-style: normal;
+    font-weight: 700;
+        font-size: 2.15625rem; /* 69px */
+        line-height: 2.53125rem; /* 81px */
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+
+.science .hd {
+    position: absolute;
+    left: 220px;
+    top: 256px;
+}
+
+.communication .hd {
+    position: absolute;
+    left: 110px;
+    top: 244px;
+}
+
+.navigation .hd {
+    position: absolute;
+    left: 197px;
+    top: 256px;
+}
+
+.spacecraft .hd {
+    position: absolute;
+    left: 180px;
+    top: 240px;
+}
+
+.video .hd {
+    position: absolute;
+    left: 270px;
+    top: 258px;
+}
+
+.model .hd {
+    position: absolute;
+    left: 190px;
+    top: 243px;
+}

@@ -1,0 +1,52 @@
+.img1 {
+    position: absolute;
+    max-width: 1100px;
+    height: auto;
+    left: 80px;
+    top: 230px;
+}
+
+.img2 {
+    position: absolute;
+    max-width: 900px;
+    height: auto;
+    left: 1484px;
+    top: 777px;
+}
+
+.img3 {
+    position: absolute;
+   max-width: 900px;
+    height: auto;
+    left: 1484px;
+    top: 230px;
+}
+
+.text1 {
+    position: absolute;
+    width: 610px;           /* extended from 380px — right edge 2540px, uses full available space */
+    padding-right: 5%;
+    box-sizing: border-box;
+    height: 753px;
+    left: 1780px;
+    top: 380px;
+
+    font-family: var(--base-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.21875rem; /* rem-based — matches magnetometer gold standard */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+
+    color: #000000;
+    overflow: hidden;
+}
+
+body.a11y-scaled .text1 {
+    align-items: flex-start;
+    overflow-y: auto;
+    padding-top: 0.5rem;
+}

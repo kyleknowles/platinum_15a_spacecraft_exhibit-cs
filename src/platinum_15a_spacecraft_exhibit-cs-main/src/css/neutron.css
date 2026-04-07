@@ -1,0 +1,35 @@
+/*COMMENT OUT = OG*/
+img {
+    /* position: absolute;
+    width: 1219px; 
+    height: 813px;
+    left: 461px;
+    top: 314px; */
+    position: absolute;
+    width: 1219px; 
+    height: auto;
+    left: 261px;
+    top: 314px;
+}
+
+.text1 {
+    position: absolute;
+    width: 580px;
+    height: 813px;
+    left: 1721px;
+    top: 314px;
+
+    /* P */
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 39px;
+
+    /* or 195% */
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+
+    color: #000000;
+}

@@ -1,0 +1,82 @@
+.img1 {
+    position: absolute;
+    width: 585px;
+    height: 591px;
+    left: 41px;
+    top: 242px;
+}
+
+.img2 {
+    position: absolute;
+    width: 799px;
+    height: 591px;
+    left: 671px;
+    top: 242px;
+}
+
+.img3 {
+    position: absolute;
+    width: 600px;
+    height: 800px;
+    left: 1515px;
+    top: 237px;
+}
+
+.text1 { /* Gamma ray — rightmost column, beside img3 */
+    position: absolute;
+    width: 379px;
+    height: 994px;
+    left: 2145px;
+    top: 218px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.21875rem; /* rem-based so it scales with font — matches magnetometer gold standard */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+    color: #000000;
+
+    overflow: hidden;
+}
+
+.text2 { /* Neutron spectrometer — below img1 and img2 */
+    position: absolute;
+    width: 750px;
+    height: 360px; /* was 311 — increased to contain text at 1× without clipping top/bottom */
+    left: 671px;
+    top: 885px;    /* bottom: 885+360=1245; buttons at 1270 — 25px clearance */
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.21875rem; /* rem-based — matches gold standard */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+    color: #000000;
+
+    overflow: hidden;
+}
+
+/* At scaled font sizes, anchor text to top so the beginning is never clipped.
+   overflow-y: auto is already injected by accessibility.css for .text1/.text2. */
+body.a11y-scaled .text1,
+body.a11y-scaled .text2 {
+    align-items: flex-start;
+    padding-top: 0.5rem;
+}
+
+/* Neutron text (.text2) extends left toward the screen edge at scaled sizes,
+   gaining horizontal room so text wraps into fewer, taller lines.
+   Left: 5% of 1920px viewport = 96px.
+   Right edge stays at original 1421px (671 + 750): new width = 1421 - 96 = 1325px. */
+body.a11y-scaled .text2 {
+    left: 96px;
+    width: 1325px;
+}

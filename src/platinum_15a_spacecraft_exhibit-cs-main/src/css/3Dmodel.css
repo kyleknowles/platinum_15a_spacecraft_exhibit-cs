@@ -1,0 +1,71 @@
+.bg {
+    margin-top: 114px;
+}
+
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+.Asteroid {
+    position: absolute;
+    width: 1001.8px;
+    height: 657.74px;
+    left: 253px;
+    top: 434px;
+
+    background: #A84BE1;
+    border-radius: 30px;
+}
+
+.Spacecraft {
+    position: absolute;
+    width: 1001.8px;
+    height: 657.74px;
+    left: 1306.2px;
+    top: 434px;
+
+    background: #A84BE1;
+    border-radius: 30px;
+}
+
+.Asteroid .hd {
+    position: absolute;
+    width: 1004px;
+    height: 658px;
+    left: 253px;
+    top: 0px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.875rem; /* 60px */
+    line-height: 70px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+
+.Spacecraft .hd {
+    position: absolute;
+    width: 1004px;
+    height: 658px;
+    left: 250px;
+    top: 0px;
+
+    /* H2 */
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.875rem; /* 60px */
+    line-height: 70px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}

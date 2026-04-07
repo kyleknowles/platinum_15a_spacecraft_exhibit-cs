@@ -1,0 +1,8 @@
+.DS_Store
+.DS_Store.vscode/launch.json
+.vscode/*
+!.vscode/extensions.json
+.vscode/*
+/docs/*
+./claude/*
+CLAUDE.md

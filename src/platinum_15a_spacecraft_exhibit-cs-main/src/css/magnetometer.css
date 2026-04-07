@@ -1,0 +1,50 @@
+.img1 {
+    position: absolute;
+    width: 1008px;
+    height: 815px;
+    left: 41px;
+    top: 295px;
+}
+
+.img2 {
+    position: absolute;
+    width: 799px;
+    height: 815px;
+    left: 1090px;
+    top: 295px;
+}
+
+p {
+    position: absolute;
+    /* Extends from right edge of img2 (1930px) to last button right (2540px).
+       padding-right: 5% supplies the minimum 5% inset the design requires. */
+    width: 610px;
+    padding-right: 5%;
+    box-sizing: border-box;
+    /* Aligns top and bottom with the two images (top 295, height 815). */
+    height: 815px;
+    left: 1930px;
+    top: 295px;
+
+    font-family: var(--base-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.21875rem;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+    color: #000000;
+
+    /* Clip any overflow at default scale so nothing bleeds into adjacent space. */
+    overflow: hidden;
+}
+
+/* At scaled font sizes, anchor text to the top so the beginning is always
+   visible, then let the box scroll vertically for any overflow. */
+body.a11y-scaled p {
+    align-items: flex-start;
+    overflow-y: auto;
+    padding-top: 0.5rem;
+}

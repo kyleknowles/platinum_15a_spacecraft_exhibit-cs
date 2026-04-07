@@ -1,0 +1,75 @@
+.bg {
+    margin-top: 1px;
+}
+
+.Cen {
+    position: absolute;
+    width: 799px;
+    height: 522px;
+    left: 41px;
+    top: 459px;
+
+    background: #D44242;
+    border-radius: 30px;
+}
+
+.Dim {
+    position: absolute;
+    width: 799px;
+    height: 525px;
+    left: 881px;
+    top: 459px;
+
+    background: #D44242;
+    border-radius: 30px;
+}
+
+.Fun {
+    position: absolute;
+    width: 799px;
+    height: 525px;
+    left: 1721px;
+    top: 459px;
+
+    background: #D44242;
+    border-radius: 30px;
+}
+
+.hd {
+    width: 799px;
+    height: 525px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.875rem; /* 60px */
+    line-height: 70px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+
+.Cen .hd {
+    position: absolute;
+    left: 195px;
+    top: 0px;
+}
+
+.Dim .hd {
+    position: absolute;
+    left: 220px;
+    top: 0px;
+}
+
+.Fun .hd {
+    position: absolute;
+    left: 240px;
+    top: 0px;
+}
+
+.Mat .hd {
+    position: absolute;
+    left: 255px;
+    top: 0px;
+}

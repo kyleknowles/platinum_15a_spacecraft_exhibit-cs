@@ -1,0 +1,112 @@
+.bg {
+    margin-top: 169px;
+}
+
+.magn {
+    position: absolute;
+    width: 399px;
+    height: 324.59px;
+    left: 461px;
+    top: 267px;
+    border-radius: 30px;
+}
+
+.scio {
+    position: absolute;
+    width: 399px;
+    height: 324.59px;
+    left: 461px;
+    top: 967px;
+    border-radius: 30px;
+}
+
+.magn img {
+    position: absolute;
+    height: 95%;
+    left: 13px;
+    top: 10px;
+}
+
+.gamma {
+    position: absolute;
+    width: 399px;
+    height: 324.59px;
+    left: 1301px;
+    top: 267px;
+    border-radius: 30px;
+}
+
+.low {
+    position: absolute;
+    width: 799px;
+    height: 325px;
+    left: 461px;
+    top: 650px;
+
+    background: rgba(2, 107, 0, 0.9);
+    border-radius: 30px;
+}
+
+.mul {
+    position: absolute;
+    width: 399px;
+    height: 324.59px;
+    left: 1301px;
+    top: 650px;
+
+    background: rgba(2, 107, 0, 0.9);
+    border-radius: 30px;
+}
+
+.hd {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 70px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+
+.magn .hd {
+    position: absolute;
+    width: 584px;
+    height: 77px;
+    left: 160px;
+    top: 125px;
+}
+
+.gamma .hd {
+    position: absolute;
+    width: 700px;
+    height: 77px;
+    left: 55px;
+    top: 125px;
+}
+
+.neu .hd {
+    position: absolute;
+    width: 700px;
+    height: 77px;
+    left: 80px;
+    top: 225px;
+}
+
+.low .hd {
+    position: absolute;
+    width: 800px;
+    height: 77px;
+    left: 100px;
+    top: 125px;
+}
+
+.mul .hd {
+    position: absolute;
+    width: 700px;
+    height: 77px;
+    left: 50px;
+    top: 125px;
+}

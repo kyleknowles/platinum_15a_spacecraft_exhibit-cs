@@ -1,0 +1,34 @@
+.home-title {
+    padding-top: 0px;
+    justify-content: center;
+    display: flex;
+    color: #7EEA12;
+    font-size: 100px;
+    margin-bottom: -30px;
+}
+
+.home-subtitle {
+    padding-top: 0px;
+    justify-content: center;
+    display: flex;
+    color: #7EEA12;
+    font-size: 70px;
+}
+
+.countdown {
+    padding-top: 0px;
+    justify-content: center;
+    display: flex;
+    color: white;
+    font-size: 50px;
+    margin-bottom: -30px;
+    background-color: transparent;
+}
+
+.learn-more {
+    text-align: center;
+    justify-content: center;
+   
+    color: white;
+    background-color: transparent;
+}

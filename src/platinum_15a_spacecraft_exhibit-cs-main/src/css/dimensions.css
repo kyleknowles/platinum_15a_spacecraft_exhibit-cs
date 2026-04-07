@@ -1,0 +1,149 @@
+.img1 {
+    position: absolute;
+    width: 799px;
+    height: 639px;
+    left: 461px;
+    top: 307px;
+}
+
+.img2 {
+    position: absolute;
+    width: 799px;
+    height: 644px;
+    left: 1301px;
+    top: 289px;
+}
+
+.text1 {
+    position: absolute;
+    width: 379px;
+    height: 243px;
+    left: 450px;
+    top: 961px;
+
+    font-family: var(--base-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.21875rem;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+
+    color: #000000;
+    overflow: hidden;
+}
+
+.text2 {
+    position: absolute;
+    width: 380px;
+    height: 243px;
+    left: 900px;
+    top: 961px;
+
+    font-family: var(--base-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.21875rem;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+
+    color: #000000;
+    overflow: hidden;
+}
+
+.text3 {
+    position: absolute;
+    width: 374px;
+    height: 243px;
+    left: 1320px;
+    top: 961px;
+
+    font-family: var(--base-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.21875rem;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+
+    color: #000000;
+    overflow: hidden;
+}
+
+.text4 {
+    position: absolute;
+    width: 400px;
+    height: 243px;
+    left: 1716px;
+    top: 961px;
+
+    font-family: var(--base-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.21875rem;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+
+    color: #000000;
+    overflow: hidden;
+}
+
+/* Medium & Large: reposition text boxes around the images */
+
+/* Text 1 — left of left image, 5% (~96px) gap from left border and image */
+body.a11y-scaled .text1 {
+    left: 96px;
+    width: 300px;
+    top: 307px;
+    height: 960px;
+    align-items: flex-start;
+    overflow-y: auto;
+    padding-top: 0.35rem;
+}
+
+/* Text 2 — under left image, same width as image (799px), 5% internal padding */
+body.a11y-scaled .text2 {
+    left: 461px;
+    width: 799px;
+    top: 966px;
+    height: 275px;
+    padding: 0 40px;
+    box-sizing: border-box;
+    align-items: flex-start;
+    overflow-y: auto;
+    padding-top: 0.5rem;
+}
+
+/* Text 3 — under right image, same width as image (799px), 5% internal padding */
+body.a11y-scaled .text3 {
+    left: 1301px;
+    width: 799px;
+    top: 953px;
+    height: 275px;
+    padding: 0 40px;
+    box-sizing: border-box;
+    align-items: flex-start;
+    overflow-y: auto;
+    padding-top: 0.5rem;
+}
+
+/* Text 4 — right of right image, 5% (~96px) gap from image and right border */
+body.a11y-scaled .text4 {
+    left: 2196px;
+    width: 370px;
+    top: 289px;
+    height: 960px;
+    align-items: flex-start;
+    overflow-y: auto;
+    padding-top: 0.35rem;
+}

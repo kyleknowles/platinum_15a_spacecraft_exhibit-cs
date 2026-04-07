@@ -1,0 +1,38 @@
+.img1 {
+    position: absolute;
+    width: 1670px;
+    height: 1035px;
+    left: 153px;
+    top: 205px;
+}
+
+.text1 {
+    position: absolute;
+    width: 700px;           /* extended from 380px — right edge aligned to 2540px */
+    padding-right: 5%;
+    box-sizing: border-box;
+    height: 823px;
+    left: 1840px;
+    top: 360px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.21875rem; /* rem-based — matches magnetometer gold standard */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+
+    color: #000000;
+    overflow: hidden;
+}
+
+/* At scaled font sizes, anchor text to top so the beginning is never clipped;
+   overflow-y: auto injected by accessibility.css for .text1 under body.a11y-scaled */
+body.a11y-scaled .text1 {
+    align-items: flex-start;
+    overflow-y: auto;
+    padding-top: 0.5rem;
+}

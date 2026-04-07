@@ -1,0 +1,38 @@
+
+img {
+    position: absolute;
+    width: 1257px;
+    height: 843px;
+    left: 121px;
+    top: 299px;
+}
+
+.text1 {
+    position: absolute;
+    width: 1110px;           /* extended from 441px — right edge 2540px, uses full available space */
+    padding-right: 5%;
+    box-sizing: border-box;
+    height: 802px;
+    left: 1450px;
+    top: 275px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.21875rem; /* rem-based — matches magnetometer gold standard */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+
+    color: #000000;
+    overflow: hidden;
+}
+
+body.a11y-scaled .text1 {
+    align-items: flex-start;
+    overflow-y: auto;
+    padding-top: 0.5rem;
+    height: 920px
+}

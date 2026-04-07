@@ -1,0 +1,440 @@
+/* ==========================================================================
+   accessibility.css — Psyche 15A Spacecraft Exhibit
+   Loaded on every page. Defines font scaling, high contrast mode, settings
+   button, and settings panel styles.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Font Scale Variable
+   Overrides global.css html font-size to respond to the JS-controlled scale.
+   -------------------------------------------------------------------------- */
+:root {
+  --a11y-font-scale: 1;
+}
+
+html {
+  /* Scales the entire rem-based type system. global.css sets base at 32px. */
+  font-size: calc(32px * var(--a11y-font-scale));
+}
+
+/* When font scale > 1, allow the page to grow and scroll vertically. */
+body.a11y-scaled {
+  height: auto !important;
+  min-height: 1080px;
+  overflow-y: auto;
+}
+
+/* --------------------------------------------------------------------------
+   2. Text Box Default Styling
+   Applies to all subpage content boxes (.text1–.text4).
+   accessibility.css loads after page-specific CSS so these rules win
+   over the color: #000000 declarations in each page's CSS file.
+   -------------------------------------------------------------------------- */
+.text1,
+.text2,
+.text3,
+.text4,
+.img p,
+.img p2,
+main > p {
+  background-color: #fee5c0;
+  color: #5c2851;
+}
+
+/* --------------------------------------------------------------------------
+   3. High Contrast Mode
+   Applied by adding .a11y-cvd to <body>.
+   Reverts text boxes to black-on-white; forces white text elsewhere.
+   -------------------------------------------------------------------------- */
+body.a11y-cvd {
+  color: #ffffff !important;
+}
+
+body.a11y-cvd button:not([class*="a11y-"]) {
+  color: #000000 !important;
+}
+
+body.a11y-cvd .text1,
+body.a11y-cvd .text2,
+body.a11y-cvd .text3,
+body.a11y-cvd .text4,
+body.a11y-cvd .img p,
+body.a11y-cvd .img p2,
+body.a11y-cvd main > p {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. Settings Button — injected into .header on every page
+   Positioned left of the home button (home is at right: 56px, width 103px).
+   -------------------------------------------------------------------------- */
+.a11y-settings-btn {
+  position: absolute;
+  right: 179px;          /* 56px home offset + 103px home width + 20px gap */
+  top: 38px;
+  width: 103px;
+  height: 103px;
+  border: none;
+  border-radius: 50%;
+  background: #888888;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: background 0.15s ease;
+}
+
+.a11y-settings-btn:active {
+  background: #666666;
+}
+
+.a11y-settings-btn .a11y-gear-icon {
+  position: absolute;
+  bottom: 42px;
+  width: 103px;
+  height: 103px;
+  font-size: 150px;    /* px keeps icon fixed regardless of font scale */
+  z-index: 1000;
+  display: block;      /* removes inline text metrics that cause the ⚙ glyph to appear off-centre */
+}
+
+/* "Settings" label hidden — icon-only button */
+.a11y-settings-btn .a11y-settings-label {
+  display: none;
+}
+
+/* Floating variant for pages without .header (index.html).
+   Stays at the top of the page, horizontally centred within the exhibit strip.
+   PSYCHE logo maps to screen x≈75 and "The Exhibit" text to screen x≈101
+   (via the strip's rotate(−90deg) transform); midpoint ≈ 88px → left: 37px. */
+.a11y-settings-btn-float {
+  position: fixed;
+  top: 38px;            /* matches .a11y-settings-btn top on all header pages */
+  left: 50px;           /* centres button at x≈88, midpoint of PSYCHE logo (x≈75) and "The Exhibit" text (x≈101) */
+  width: 103px;         /* matches .a11y-settings-btn size on all other pages */
+  height: 103px;
+  border: none;
+  border-radius: 50%;
+  background: #888888;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+  transition: background 0.15s ease;
+}
+
+.a11y-settings-btn-float:active {
+  background: #666666;
+}
+
+.a11y-settings-btn-float .a11y-gear-icon {
+  position: absolute;
+  bottom: 42px;
+  width: 103px;
+  height: 103px;
+  font-size: 150px;    /* px keeps icon fixed regardless of font scale */
+  z-index: 1000;
+  display: block;      /* removes inline text metrics that cause the ⚙ glyph to appear off-centre */
+}
+
+/* "Settings" label hidden — icon-only button */
+.a11y-settings-btn-float .a11y-settings-label {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   5. Settings Panel Overlay
+   Full-screen backdrop. Panel is centred via fixed positioning at the exact
+   midpoint of the 1920×1080 kiosk display (960px, 540px). Using
+   translate(-50%,-50%) keeps the panel's visual centre locked at that point
+   regardless of how large the panel grows due to font scaling.
+   -------------------------------------------------------------------------- */
+.a11y-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1000;
+}
+
+.a11y-overlay[hidden] {
+  display: none;
+}
+
+.a11y-panel {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem 3rem;
+  width: max-content;
+  min-width: 600px;
+  max-width: 85vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  /* Fixed at kiosk centre (1920/2=960, 1080/2=540).
+     translate(-50%,-50%) shifts the panel's own midpoint to that anchor so the
+     panel stays centred as its size changes. */
+  position: fixed;
+  left: 50%;   /* 960px on 1920px kiosk */
+  top: 50%;    /* 540px on 1080px kiosk */
+  transform: translate(-50%, -50%);
+}
+
+/* Reduce padding/gap at scaled font sizes so the panel fits within the
+   1080px kiosk viewport height without requiring excessive scroll. */
+body.a11y-scaled .a11y-panel {
+  padding: 1.5rem 2rem;
+  gap: 1.25rem;
+}
+
+.a11y-panel-heading {
+  font-family: var(--base-font-family);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0d0d1a;
+  margin: 0;
+  padding-right: 2rem; /* space for close button */
+}
+
+/* --------------------------------------------------------------------------
+   6. Close Button (top-right of panel)
+   -------------------------------------------------------------------------- */
+.a11y-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid #cccccc;
+  border-radius: 50%;
+  background: transparent;
+  color: #333333;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.a11y-close-btn:active {
+  background: #f0f0f0;
+  border-color: #999999;
+}
+
+/* --------------------------------------------------------------------------
+   7. Text Size Control Group
+   -------------------------------------------------------------------------- */
+.a11y-control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.a11y-control-label {
+  font-family: var(--base-font-family);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #444444;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.a11y-size-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.a11y-size-btn {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #1a1a2e;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1a1a2e;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+  flex-shrink: 0;
+}
+
+.a11y-size-btn:active {
+  background: #e8e8f5;
+}
+
+.a11y-size-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.a11y-scale-display {
+  font-family: var(--base-font-family);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  min-width: 3.5rem;
+  text-align: center;
+}
+
+.a11y-size-preview {
+  font-family: var(--base-font-family);
+  color: #555555;
+  line-height: 1.2;
+  /* font-size is set inline by JS to reflect the current scale */
+}
+
+/* --------------------------------------------------------------------------
+   8. High Contrast Mode Toggle (role="switch")
+   -------------------------------------------------------------------------- */
+.a11y-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.a11y-toggle-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.a11y-toggle-name {
+  font-family: var(--base-font-family);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0d0d1a;
+}
+
+.a11y-toggle-desc {
+  font-family: var(--base-font-family);
+  font-size: 0.625rem;
+  color: #666666;
+}
+
+.a11y-toggle-switch {
+  position: relative;
+  width: 4rem;
+  height: 2.25rem;
+  border: none;
+  border-radius: 2rem;
+  background: #cccccc;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.a11y-toggle-switch[aria-checked="true"] {
+  background: #1a1a2e;
+}
+
+.a11y-toggle-switch::after {
+  content: '';
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: #ffffff;
+  transition: transform 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
+.a11y-toggle-switch[aria-checked="true"]::after {
+  transform: translateX(1.75rem);
+}
+
+/* --------------------------------------------------------------------------
+   9. Status Live Region (announced to screen readers)
+   -------------------------------------------------------------------------- */
+.a11y-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   10. Scaled-Layout Overflow Fixes (T9)
+   Text containers (.text1/.text2/etc.) have fixed heights set by page CSS.
+   When font scale > 1 the enlarged text overflows those boxes. Adding
+   overflow-y: auto makes each container independently scrollable so the
+   user can read all text within its fixed bounds.
+   -------------------------------------------------------------------------- */
+body.a11y-scaled .text1,
+body.a11y-scaled .text2,
+body.a11y-scaled .text3,
+body.a11y-scaled .text4 {
+  overflow-y: auto;
+}
+
+/* --------------------------------------------------------------------------
+   11. Button Font Lock — branch nav and homepage tile buttons
+   Prevents button labels from scaling with --a11y-font-scale. Each rule
+   divides the button's original rem size by the scale factor so the result
+   is always the original px value (e.g. calc(1rem / 1.5) = 32px at 1.5×).
+   Accessibility panel buttons ([class*="a11y-"]) are excluded throughout.
+   -------------------------------------------------------------------------- */
+
+/* All non-a11y buttons default to 1rem (32px) — unaffected by font scale */
+button:not([class*="a11y-"]) {
+  font-size: calc(1rem / var(--a11y-font-scale));
+}
+
+/* Spacecraft + navigation branch sub-buttons are 0.75rem (24px) */
+button.buttonCC, button.buttonDim, button.buttonFun, button.buttonMat,
+button.buttonCGT, button.buttonStar, button.buttonSun, button.buttonSP {
+  font-size: calc(0.75rem / var(--a11y-font-scale));
+}
+
+/* Homepage tile headings (.hd) inside buttons — 2.15625rem (69px) */
+.hd {
+  font-size: calc(2.15625rem / var(--a11y-font-scale));
+}
+
+/* Back navigation text (div inside .back, not a button element) — 1rem (32px) */
+.back .text {
+  font-size: calc(1rem / var(--a11y-font-scale));
+}
+
+/* --------------------------------------------------------------------------
+   12. index.html exhibit strip — "The Exhibit" text font lock
+   .exhibit .text uses 1.3125rem (42px). Dividing by --a11y-font-scale cancels
+   the html font-size increase so the text stays at 42px at all scale steps.
+   -------------------------------------------------------------------------- */
+.exhibit .text {
+  font-size: calc(1.3125rem / var(--a11y-font-scale));
+  line-height: 49px; /* 1.53125rem × 32px base — fixed in px so it never scales */
+}
+
+/* --------------------------------------------------------------------------
+   13. Header Title — fixed size across all font scales
+   .header .text uses rem-based font-size, which would scale with the a11y
+   font toggle and overflow the 179px header. Pinning to px keeps the header
+   layout stable at all scale steps. text-overflow:ellipsis handles any title
+   that is long enough to wrap at the fixed size.
+   -------------------------------------------------------------------------- */
+.header .text {
+  font-size: 69px;
+  line-height: 81px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
